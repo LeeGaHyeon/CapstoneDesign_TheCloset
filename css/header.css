@@ -1,0 +1,14 @@
+#navbarNav {
+  position: relative;
+}
+#navbarNav .nav-item_login {
+  position: absolute;
+  left: 53%;
+}
+#navbarNav .nav-item_signup {
+  position: absolute;
+  left: 59%;
+}
+#navbarNav .nav-item {
+  font-size: x-large;
+}
