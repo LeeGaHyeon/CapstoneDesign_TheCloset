@@ -1,19 +1,24 @@
 package capston.thecloset.service;
 
 import capston.thecloset.domain.Member;
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.validator.constraints.Length;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 
 @Data
 @Builder
 @NoArgsConstructor
 public class MemberInputDto {
 
-    private String  userId; //name
+    private String  userId;
     private String email;
     private String userName;
+
+    @Length(min=8,max = 12,message = "비밀번호 8자 이상, 12자 이하로 입력해주세요")
     private String password;
 
 

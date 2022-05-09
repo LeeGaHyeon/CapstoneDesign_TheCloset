@@ -1,19 +1,25 @@
 spring:
   datasource:
-    url:  jdbc:h2:tcp://localhost/~/thecloset
-    username: capston
-    password:
-    driver-class-name: org.h2.Driver
+    url: jdbc:mariadb://localhost:43306/thecloset
+    username: thecloset
+    password: capston
+    driver-class-name: org.mariadb.jdbc.Driver
 
+    thymeleaf:
+      cache: false
+      prefix: classpath:/templates/
 
   jpa:
+    databaseplatform:  org.hibernate.dialect.MariaDB102Dialect
     hibernate:
       ddl-auto: create
     properties:
       hibernate:
-        # show_sql: true
+        show_sql: true
         format_sql: true
 
 logging.level:
   org.hibernate.SQL: debug
   org.hibernate.type: trace
+
+

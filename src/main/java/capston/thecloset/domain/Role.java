@@ -1,5 +1,5 @@
 package capston.thecloset.domain;
 
 public enum Role{
-    USER,ADMIN
+    ROLE_ADMIN, ROLE_MEMBER
 }

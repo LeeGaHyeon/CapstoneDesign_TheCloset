@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 public class Member {
 
     @Id @GeneratedValue
-    @Column(name = "member_Id")
+    @Column(name = "member_id")
     private Long userSn; //식별자
 
     @Column(unique = true)
@@ -43,13 +43,13 @@ public class Member {
         this.userName = userName;
         this.password = password;
         this.email = email;
-        this.role = Role.USER;
+        this.role = Role.ROLE_MEMBER;
         this.regdt = LocalDateTime.now();
     }
 
     //dto -> entity
-    public static Member createMember(MemberInputDto parameter){
-        String encPassword= BCrypt.hashpw(parameter.getPassword(),BCrypt.gensalt());
-        return new Member(parameter.getUserId(),parameter.getUserName(),parameter.getEmail(),encPassword);
+    public static Member createMember(MemberInputDto parameter,PasswordEncoder passwordEncoder){
+        String password = passwordEncoder.encode(parameter.getPassword());
+        return new Member(parameter.getUserId(),parameter.getUserName(),parameter.getEmail(),password);
     }
 }

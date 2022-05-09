@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <th:block th:replace="/layout/head :: headFragment "></th:block>
+  <link rel="stylesheet" th:href="@{/css/header.css}">
+  <link rel="stylesheet" th:href="@{/css/main.css}">
+  <title>The Closet.</title>
+</head>
+<body>
+<header th:replace="/layout/header :: headerFragment"></header>
+  <!--옷등록 옷장클릭버튼-->
+  <div id="wrapper">
+    <div class="container">
+      <div class="row row-cols-lg-2 row-cols-sm-1 row-cols-md-2">
+        <div class="col">
+          <img th:src="@{/images/ricepaper2.png}" class="img-thumbnail" alt="...">
+          <img class="ic_img1" th:src="@{/icon/camera.png}" >
+          <div class="btn1">
+            <a class="btn btn-outline-dark btn-md" href="upload.html" role="button">옷등록</a>
+          </div>
+        </div>
+        <div class="col">
+          <img th:src="@{/images/ricepaper2.png}" class="img-thumbnail" alt="...">
+          <img class="ic_img2" th:src="@{/icon/tshirt.png}" alt="...">
+          <div class="btn2">
+            <a class="btn btn-outline-dark btn-md" href="product.html" role="button">옷장</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<footer th:replace="layout/footer :: footerFragment"></footer>
+</html>
