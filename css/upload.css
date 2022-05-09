@@ -1,12 +1,13 @@
 .container {
   position: relative;
+  left: 18%;
 }
-.container > h1 {
-  position: absolute;
-  left: 10%;
-}
-.container .main-content {
-  position: absolute;
-  left: 10%;
-  padding-top: 50px;
-}
+/*.container > h1 {*/
+/*  position: absolute;*/
+/*  left: 10%;*/
+/*}*/
+/*.container .main-content {*/
+/*  position: absolute;*/
+/*  left: 10%;*/
+/*  padding-top: 50px;*/
+/*}*/

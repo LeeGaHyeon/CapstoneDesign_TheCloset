@@ -1,6 +1,7 @@
 function check_pw(){
 
     var pw = document.getElementById('pw').value;
+    var pw2 = document.getElementById('pw2').value;
     var SC = ["!","@","#","$","%"];
     var check_SC = 0;
 
@@ -15,3 +16,4 @@ function check_pw(){
         }
     }
 }
+

@@ -21,7 +21,7 @@ html, body {
 }
 .container {
   position: relative;
-  padding-top: 30px;
+  padding-top: 8rem;
 }
 #wrapper {
   height: auto;
@@ -35,13 +35,13 @@ header > h1 {
   padding-top: 15px;
 }
 footer {
-  height: 100px;
+  height: 8rem;
   position: relative;
   transform: translateY(-100%);
   background-image: url("../images/ricepaper2.png");
 }
 footer > p {
-  padding-top: 10px;
+  padding-top: 1rem;
   text-align: center;
   font-weight: bold;
   font-family: Arial, sans-serif;
@@ -75,18 +75,18 @@ img {
   font-weight: bold;
 }
 .ic_img1 {
-  width: 100px;
-  height: 100px;
+  width: 8rem;
+  height: 8rem;
   position: absolute;
-  top: 35%;
-  left: 16%;
+  top: 40%;
+  left: 14%;
 }
 .col .ic_img2 {
   width: 100px;
   height: 100px;
   position: absolute;
-  top: 35%;
-  right: 27%;
+  top: 45%;
+  right: 26%;
 }
 .btn1{
   position: absolute;

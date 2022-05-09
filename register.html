@@ -13,7 +13,6 @@
   <link rel="stylesheet" href="css/register.css">
   <script src="js/pwcheck.js"></script>
   <script src="js/loadHTML.js"></script>
-
   <title>The Closet.</title>
 </head>
 <body>
@@ -44,6 +43,16 @@
               <label for="pw">비밀번호</label>
               <br>
               <input type="password" class="form-control" id="pw" onchange="check_pw()" required>
+              <br>
+              <div class="invalid-feedback">
+                비밀번호를 입력해주세요.
+              </div>
+            </div>
+            <div class="md-3">
+              <label for="pw2">비밀번호확인</label>
+              <br>
+              <input type="password" class="form-control" id="pw2" onchange="check_pw()" required>
+<!--              <p id="check"></p>-->
               <br>
               <div class="invalid-feedback">
                 비밀번호를 입력해주세요.

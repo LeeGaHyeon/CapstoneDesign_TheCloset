@@ -14,25 +14,28 @@
 <body>
   <header data-include="header.html"></header>
   <div id="wrapper">
-    <section class="section1">
-      <article>
-        <br>
-        <h1>Upload</h1>
-        <br>
-      </article>
-    </section>
     <div class="container">
-      <h1>Camera or File</h1>
-      <section class="main-content">
-        <p>
-          <input type="file" id="take-picture" accept="image/*;capture=camera" onchange="setThumbnail(event);">
-        </p>
-        <h2>Preview:</h2>
-        <p>
-        <div id="image_container"></div>
-        <script type="text/javascript" src="js/upload.js"></script>
-        <p id="error"></p>
-      </section>
+      <img style="width: 500px; height: 500px" id="previewImage" src="https://dummyimage.com/500x500/ffffff/000000.png&text=file upload">
+      <input style="display: block;" type="file" id="inputImage">
+
+      <script type="text/javascript">
+          // 단일파일업로드
+          function readImage(input) {
+              if (input.files && input.files[0]) {
+                  const reader = new FileReader();
+
+                  reader.onload = (e) => {
+                      const previewImage = document.getElementById('previewImage');
+                      previewImage.src = e.target.result;
+                  }
+                  reader.readAsDataURL(input.files[0]);
+              }
+          }
+          // 이벤트 리스너
+          document.getElementById('inputImage').addEventListener('change', (e) => {
+              readImage(e.target);
+          })
+      </script>
     </div>
   </div>
 </body>
