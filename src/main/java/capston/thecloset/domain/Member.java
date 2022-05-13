@@ -4,27 +4,31 @@ import capston.thecloset.service.MemberInputDto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
 @Getter
 public class Member {
 
-    @Id @GeneratedValue
-    @Column(name = "member_id")
-    private Long userSn; //식별자
+    @Id
+    @Column(unique = true, name = "user_id")
+    private String userId; //로그인아이디,식별
 
-    @Column(unique = true)
-    private String userId; //로그인아이디
     private String userName;
     private String email;
     private String password;
 
+    @Enumerated(EnumType.STRING)
+    private Role role;
+
+   @OneToMany(mappedBy = "member")
+   private List<Item> ItemList = new ArrayList<>();
 
     @Column(name = "RegDate")
     @DateTimeFormat(pattern = "yyyy-MM-dd")
@@ -34,8 +38,7 @@ public class Member {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDateTime udtDt;//회원정보 수정
 
-    @Enumerated(EnumType.STRING)
-    private Role role;
+
 
     //createMember를 위한 생성자 , 다른 클래스에서 호출 불가능
     private Member(String userId, String userName, String email,String password) {

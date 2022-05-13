@@ -9,14 +9,14 @@
   <title>register</title>
 </head>
 <body>
+
   <header th:replace="/layout/header :: headerFragment"></header>
   <div id="wrapper">
     <div class="container">
       <div class="input-form-background row">
         <div class="input-form col-md-12 mx-auto">
-          <h4 class="mb-3">회원가입</h4>email
+          <h4 class="mb-3">회원가입</h4>
           <form class="validation-form" th:action="@{/members/new}" method="post" th:object="${memberInputDto}" novalidate>
-
             <div class="md-3">
               <label th:for="userName">이름</label>
               <br>
@@ -93,6 +93,12 @@
           }, false);
         });
       }, false);
+    </script>
+    <script th:inline="javascript">
+      var errorMessage =  [[${errorMessage}]];
+      if(errorMessage !== null){
+        alert(errorMessage);
+      }
     </script>
   </div>
 </body>

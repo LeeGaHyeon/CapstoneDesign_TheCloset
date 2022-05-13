@@ -34,9 +34,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .logoutSuccessUrl("/");
 
         http.authorizeRequests()
-                .antMatchers("/members/**","/").hasAnyAuthority()
-                .antMatchers("/members/**","/").permitAll()
-                .anyRequest().authenticated();
+                .mvcMatchers("/members/new",
+                             "/members/login",
+                            "/members/login/error"
+                            ).permitAll()
+                        .anyRequest().authenticated();
 
         http.exceptionHandling()
                 .authenticationEntryPoint(new CustomAuthenticationEntryPoint());
@@ -44,7 +46,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(WebSecurity web) throws Exception{
-        web.ignoring().antMatchers("/css/**", "/js/**", "/images/**","/icon/**");
+        web.ignoring().antMatchers("/css/**", "/js/**", "/images/**","/icon/**","/files/**");
     }
 
     @Bean

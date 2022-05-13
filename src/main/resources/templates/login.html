@@ -16,12 +16,12 @@
   <title>Login</title>
 </head>
 <body>
-<header th:replace="/layout/header :: headerFragment"></header>
+<header><h1>The Closet.</h1></header>
 <div id="wrapper">
   <div class="container">
     <div class="input-form-background row">
       <div class="input-form col-md-12 mx-auto">
-        <form class="validation-form" method="post" action="/members/login" novalidate>
+        <form class="validation-form" method="post" th:action="@{/members/login}" novalidate>
           <div class="md-3">
             <label th:for="userId">아이디</label>
             <br>

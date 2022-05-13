@@ -37,7 +37,6 @@ class MemberServiceImplTest {
         Member registerMember = memberService.register(member);
         //then
         assertThat(member).isEqualTo(registerMember);
-        assertThat(member.getUserSn()).isEqualTo(registerMember.getUserSn());
         assertThat(member.getUserId()).isEqualTo(registerMember.getUserId());
         assertThat(member.getUserName()).isEqualTo(registerMember.getUserName());
         assertThat(member.getPassword()).isEqualTo(registerMember.getPassword());
