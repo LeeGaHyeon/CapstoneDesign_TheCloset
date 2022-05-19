@@ -5,3 +5,7 @@
 .container > form > button {
   margin-top: 1rem;
 }
+.container > form > #previewImage1 {
+  display: none;
+  filter: grayscale(100%);
+}
