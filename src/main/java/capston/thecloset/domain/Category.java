@@ -1,19 +1,27 @@
 package capston.thecloset.domain;
 
-import lombok.NoArgsConstructor;
+import lombok.Getter;
 
-import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 
-@Entity
-@NoArgsConstructor
-public class Category {
+@Getter
+public enum Category {
+    Outer,Top,Pants,Dress,Shoes,Bag;
 
-    @Id @GeneratedValue
-    @Column(name="category_id")
-    private Long id;
+    private String value;
 
-    @OneToMany(mappedBy = "category")
-    private List<Item> itemList = new ArrayList<>();
+    Category(String value){
+        this.value = value;
+    }
+
+    Category() {
+
+    }
+
+    public static Category fromCode(String dbData){
+        return Arrays.stream(Category.values())
+                .filter(v->v.getValue().equals(dbData))
+                .findAny()
+                .orElseThrow(() -> new IllegalStateException(String.format("아이템 카테고리에 %s가 존재하지 않습니다.",dbData)));
+    }
 }

@@ -27,7 +27,7 @@ public class Member {
     @Enumerated(EnumType.STRING)
     private Role role;
 
-   @OneToMany(mappedBy = "member")
+   @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
    private List<Item> ItemList = new ArrayList<>();
 
     @Column(name = "RegDate")

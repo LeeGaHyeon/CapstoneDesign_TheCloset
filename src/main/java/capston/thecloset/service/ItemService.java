@@ -5,12 +5,12 @@ import capston.thecloset.domain.Member;
 import capston.thecloset.repository.ItemRepository;
 import capston.thecloset.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 @RequiredArgsConstructor
@@ -18,12 +18,12 @@ import java.util.UUID;
 @Service
 public class ItemService {
 
-
     private final ItemRepository itemRepository;
     private final MemberRepository memberRepository;
 
+
     @Transactional
-    public void upload(String memberId,MultipartFile file) throws Exception{
+    public void upload(String category,String memberId,MultipartFile file) throws Exception{
         //file local 저장
         String projectPath = System.getProperty("user.dir")+"\\src\\main\\resources\\static\\files";
 
@@ -34,15 +34,32 @@ public class ItemService {
         file.transferTo(saveFile);
 
         String filePath="/files/"+fileName;
+
+
         // item 생성 및 연관 관계 주입
-        Item item =  new Item(fileName,filePath);
+        Item item =  new Item(fileName,filePath,category);
+        OptionalMember(memberId, item);
+
+        saveItem(item);
+    }
+
+    public void OptionalMember(String memberId, Item item) {
         Optional<Member> findMember = memberRepository.findById(memberId);
         if(findMember.isPresent()){
             Member member = findMember.get();
             item.setMember(member);
         }
+    }
+
+    public void saveItem(Item item){
         itemRepository.save(item);
     }
 
+    public List<Item> findCategoryItem(String userId, String category){
+       return itemRepository.findItemByCategoryAndUserId(userId, category);
+    }
+    public List<Item> findUserItem(String userId){
+        return itemRepository.findItemByUserId(userId);
+    }
 
 }
