@@ -14,5 +14,20 @@
       "name": "server.servlet.multipart.maxRequestSize",
       "type": "java.lang.String",
       "description": "Description for server.servlet.multipart.maxRequestSize."
+    },
+    {
+      "name": "spring.datasource.thymeleaf.cache",
+      "type": "java.lang.String",
+      "description": "Description for spring.datasource.thymeleaf.cache."
+    },
+    {
+      "name": "spring.web.resources",
+      "type": "java.lang.String",
+      "description": "Description for spring.web.resources."
+    },
+    {
+      "name": "spring.web.resources",
+      "type": "java.lang.String",
+      "description": "Description for spring.web.resources."
     }
   ] }

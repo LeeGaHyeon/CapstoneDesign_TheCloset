@@ -5,7 +5,7 @@ spring:
     password: capston
     driver-class-name: org.mariadb.jdbc.Driver
 
-    thymeleaf:
+  thymeleaf:
       cache: false
       prefix: classpath:/templates/
 
@@ -23,9 +23,8 @@ spring:
       file-size-threshold: 1MB
       max-file-size: 10MB
       max-request-size: 10MB
-
-
-
+  freemarker:
+    cache: false
 
 logging.level:
   org.hibernate.SQL: debug

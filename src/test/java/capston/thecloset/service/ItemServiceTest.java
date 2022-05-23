@@ -6,7 +6,6 @@ import capston.thecloset.repository.ItemRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -16,7 +15,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.InstanceOfAssertFactories.map;
 
 @WebAppConfiguration
 @SpringBootTest
@@ -48,41 +46,52 @@ class ItemServiceTest {
         itemService.saveItem(item);
 
         //when
-        List<Item> itemList = itemService.findCategoryItem(item.getMember().getUserId(),item.getCategory().getValue());
-        //then
+        List<Item> itemList = itemService.findCategoryItem(item.getMember().getUserId(),item.getCategory());
+        List<ItemCategoryDto> itemCategoryDtoList = ItemCategoryDto.of(itemList);
+        //the
         if(!itemList.isEmpty()) {
             Item findItem = itemList.get(0);
-            assertThat(item.getCategory().getValue()).isEqualTo(findItem.getCategory().getValue());
+            assertThat(item.getCategory()).isEqualTo(findItem.getCategory());
             assertThat(item.getMember().getUserId()).isEqualTo(findItem.getMember().getUserId());
             assertThat(item.getFilepath()).isEqualTo(findItem.getFilename());
+
+            //List -> Dto로 변환 검증
+            ItemCategoryDto itemCategoryDto = itemCategoryDtoList.get(0);
+            assertThat(findItem.getCategory()).isEqualTo(itemCategoryDto.getCategory());
+            assertThat(findItem.getFilepath()).isEqualTo(itemCategoryDto.getFilePath());
         }
+
     }
 
     @Test
     @DisplayName("유저 아이템 찾기")
     void findUserItem() {
         //given
-        Member member1 = createMember();
-        member1 = memberService.register(member1);
-
-        Item item1 = new Item("filename1","filePath1","Pullover1");
-        item1.setMember(member1);
-        itemService.saveItem(item1);
-
-        log.info("#####################!!!!!!!!!!################################");
-        log.info("##########################"+item1.getMember().getUserId()+"\\\\\\");
+        Item item1 = createItem();
         //when
         List<Item> itemList = itemService.findUserItem(item1.getMember().getUserId());
+        List<ItemCategoryDto> itemCategoryDtoList = ItemCategoryDto.of(itemList);
 
         if(!itemList.isEmpty()) {
             Item findItem = itemList.get(0);
-            log.info("##########################"+findItem.getCategory().getValue()+"\\\\\\");
             assertThat(item1.getMember().getUserId()).isEqualTo(findItem.getMember().getUserId());
             assertThat(item1.getFilepath()).isEqualTo(findItem.getFilepath());
-        }
 
+            ItemCategoryDto itemCategoryDto = itemCategoryDtoList.get(0);
+            //assertThat(findItem.getMember().getUserId()).isEqualTo(itemCategoryDto.getUserId());
+            assertThat(findItem.getCategory()).isEqualTo(itemCategoryDto.getCategory());
+            assertThat(findItem.getFilepath()).isEqualTo(itemCategoryDto.getFilePath());
+        }
     }
 
+    private Item createItem() {
+        Member member1 = createMember();
+        member1 = memberService.register(member1);
+        Item item1 = new Item("filename1","filePath1","Pullover");
+        item1.setMember(member1);
+        itemService.saveItem(item1);
+        return item1;
+    }
 
 
     public Member createMember(){

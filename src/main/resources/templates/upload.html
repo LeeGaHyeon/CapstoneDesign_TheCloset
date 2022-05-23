@@ -2,13 +2,13 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <th:block th:replace="/layout/head :: headFragment "></th:block>
+  <link rel="stylesheet" th:href="@{/css/header.css}">
   <link rel="stylesheet" th:href="@{/css/main.css}">
   <link rel="stylesheet" th:href="@{/css/upload.css}">
   <title>Title</title>
 </head>
 <body>
 <header th:replace="/layout/header :: headerFragment"></header>
-
 <div id="wrapper">
   <div class="container">
     <form th:action="@{/Item/upload}" name="uploader" method="post" enctype="multipart/form-data">
@@ -37,6 +37,7 @@
         readImage(e.target);
       })
     </script>
+
     <script>
       category = "Pullover";
       document.uploader.category.value=category;

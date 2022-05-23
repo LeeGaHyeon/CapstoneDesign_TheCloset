@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="/layout/head :: headFragment">
+<head>
+  <th:block th:replace="/layout/head :: headFragment "></th:block>
+  <link rel="stylesheet" th:href="@{/css/header.css}">
+  <link rel="stylesheet" th:href="@{/css/main.css}">
   <link rel="stylesheet" th:href="@{/css/product.css}">
   <title>The Closet.</title>
 </head>
@@ -15,23 +18,26 @@
           <div class="product_submenu">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
               <div class="container-fluid">
-                <a class="navbar-brand" href="#">전체</a>
+                <a class="navbar-brand" th:href="@{/Item/Product/ALL}">전체</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav">
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="index.html">아우터</a>
+                      <a class="nav-link active" aria-current="page" th:href="@{/Item/Product/Outer}">아우터</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href='upload.html'>상의</a>
+                      <a class="nav-link" th:href= "@{/Item/Product/Top}">상의</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="./product.html">하의</a>
+                      <a class="nav-link" th:href="@{/Item/Product/Pants}">하의</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href='upload.html'>세트</a>
+                      <a class="nav-link" th:href="@{/Item/Product/Dress}">세트</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" th:href="@{/Item/Product/Bag}">가방</a>
                     </li>
                   </ul>
                 </div>
@@ -40,51 +46,15 @@
           </div>
         </article>
       </section>
-      <div class="container3">
+
+      <div class="container3" th:each=" item : ${items}">
         <div class="row row-cols-lg-4 row-cols-sm-1 row-cols-md-2">
           <article>
-            <img src="../static/images/watercolor.png" class="photo" alt="">
-          </article>
-          <article>
-            <img src="../static/images/watercolor.png" class="photo" alt="">
-          </article>
-          <article>
-            <img src="../static/images/watercolor.png" class="photo" alt="">
-          </article>
-          <article>
-            <img src="../static/images/watercolor.png" class="photo" alt="">
-          </article>
-        </div>
-        <div class="row row-cols-lg-4 row-cols-sm-1 row-cols-md-2">
-          <article>
-            <img src="../static/images/watercolor.png" class="photo" alt="">
-          </article>
-          <article>
-            <img src="../static/images/watercolor.png" class="photo" alt="">
-          </article>
-          <article>
-            <img src="../static/images/watercolor.png" class="photo" alt="">
-          </article>
-          <article>
-            <img src="../static/images/watercolor.png" class="photo" alt="">
-          </article>
-        </div>
-        <div class="row row-cols-lg-4 row-cols-sm-1 row-cols-md-2">
-          <article>
-            <img src="../static/images/watercolor.png" class="photo" alt="">
-          </article>
-          <article>
-            <img src="../static/images/watercolor.png" class="photo" alt="">
-          </article>
-          <article>
-            <img src="../static/images/watercolor.png" class="photo" alt="">
-          </article>
-          <article>
-            <img src="../static/images/watercolor.png" class="photo" alt="">
+            <img th:src="@{${item.filePath}}" class="photo" alt="no image" src="">
           </article>
         </div>
       </div>
-    </div>
+  </div>
 </body>
 <footer th:replace="/layout/footer :: footerFragment"></footer>
 </html>

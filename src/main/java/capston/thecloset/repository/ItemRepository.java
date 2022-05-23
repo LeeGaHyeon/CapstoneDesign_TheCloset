@@ -13,11 +13,11 @@ import java.util.List;
 
 public interface ItemRepository extends JpaRepository<Item,Long> {
 
-    @Modifying @Transactional
-    @Query("SELECT i from Item i join fetch i.member m where m.userId = :userId AND i.category = :category")
-    public List<Item> findItemByCategoryAndUserId(@Param("userId") String userId, @Param("category") String category);
 
-    @Modifying @Transactional
+    @Query("SELECT i from Item i join fetch i.member m where m.userId = :userId AND i.category = :category")
+    public List<Item> findItemByCategoryAndUserId(@Param("userId") String userId, @Param("category") Category category);
+
+
     @Query("SELECT i from Item i join fetch i.member m where m.userId = :userId")
     public List<Item> findItemByUserId(@Param("userId") String userId);
 

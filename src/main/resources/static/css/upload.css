@@ -1,12 +1,11 @@
 .container {
   position: relative;
+  left: 18%;
 }
-.container > h1 {
-  position: absolute;
-  left: 10%;
+.container > form > button {
+  margin-top: 1rem;
 }
-.container .main-content {
-  position: absolute;
-  left: 10%;
-  padding-top: 50px;
+.container > form > #previewImage1 {
+  display: none;
+  filter: grayscale(100%);
 }

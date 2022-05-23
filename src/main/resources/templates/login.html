@@ -5,8 +5,7 @@
   <link rel="stylesheet" th:href="@{/css/login.css}">
   <link rel="stylesheet" th:href="@{/css/main.css}">
   <link rel="stylesheet" th:href="@{/css/header.css}">
-  <script th:src="@{js/pwcheck.js}"></script>
-  <th:block layout:fragment="css">
+  <th:block layout:fragment="css">-->
     <style>
       .error{
         color: #bb2d3b;
@@ -33,7 +32,7 @@
           <div class="md-3">
             <label th:for="password">비밀번호</label>
             <br>
-            <input type="password" name="password" id="pw" class="form-control" onchange="check_pw()" required>
+            <input type="password" name="password" id="pw" class="form-control" required>
             <br>
             <div>
               <p th:if="${loginErrorMsg}" class="error" th:text="${loginErrorMsg}"></p>

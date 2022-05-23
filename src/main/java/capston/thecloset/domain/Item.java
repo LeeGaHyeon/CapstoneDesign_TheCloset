@@ -1,12 +1,10 @@
 package capston.thecloset.domain;
 
-import capston.thecloset.Convert.ItemCategoryConverter;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import static javax.persistence.FetchType.LAZY;
 
 @Entity
 @NoArgsConstructor
@@ -25,7 +23,7 @@ public class Item {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDateTime regdt;
 
-    @Convert(converter = ItemCategoryConverter.class)
+    @Enumerated(EnumType.STRING)
     private Category category;
 
 
@@ -49,7 +47,7 @@ public class Item {
 
     public Item(String category){
         this.regdt=LocalDateTime.now();
-        this.category= Category.valueOf(classification(category));
+       this.category= Category.valueOf(classification(category));
     }
 
     //카테고리 분류 비지니스 로직
@@ -57,19 +55,19 @@ public class Item {
         String str = null;
         switch (category) {
             case "T-shirt/top": case "Pullover": case "shirt":
-                str = "Top";break;
+                str = "TOP";break;
             case "Trouser":
-                str = "Pants";break;
+                str = "PANTS";break;
             case "Dress":
-                str = "Dress";
+                str = "DRESS";
                 break;
             case "Coat":
-                str = "Outer";break;
+                str = "OUTER";break;
             case "Sandal":
             case "Sneaker":
-                str = "Shoes";break;
+                str = "SHOES";break;
             case "Bag":
-                str = "Bag";break;
+                str = "BAG";break;
         }
         return str;
     }

@@ -12,13 +12,13 @@ import java.util.List;
 @NoArgsConstructor
 public class ItemCategoryDto {
 
-    private String userId;
+   // private String userId;
     private String filePath;
     private String category;
 
-    public ItemCategoryDto(String userId, String filePath, String category){
-        this.userId=userId;
-        this.filePath=filePath;
+    public ItemCategoryDto(String filePath, String category){
+        //this.userId=userId;
+        this.filePath = filePath;
         this.category=category;
     }
 
@@ -37,6 +37,6 @@ public class ItemCategoryDto {
 
     //Entity -> Dto
     public static ItemCategoryDto of(Item item){
-         return new ItemCategoryDto(item.getMember().getUserId(), item.getFilepath(), item.getCategory().getValue());
+         return new ItemCategoryDto(item.getFilepath(),item.getCategory().toString());
     }
 }

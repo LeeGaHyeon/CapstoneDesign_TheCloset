@@ -1,5 +1,6 @@
 package capston.thecloset.service;
 
+import capston.thecloset.domain.Category;
 import capston.thecloset.domain.Item;
 import capston.thecloset.domain.Member;
 import capston.thecloset.repository.ItemRepository;
@@ -35,7 +36,6 @@ public class ItemService {
 
         String filePath="/files/"+fileName;
 
-
         // item 생성 및 연관 관계 주입
         Item item =  new Item(fileName,filePath,category);
         OptionalMember(memberId, item);
@@ -55,8 +55,9 @@ public class ItemService {
         itemRepository.save(item);
     }
 
-    public List<Item> findCategoryItem(String userId, String category){
-       return itemRepository.findItemByCategoryAndUserId(userId, category);
+    public List<Item> findCategoryItem(String userId, Category category){
+
+       return itemRepository.findItemByCategoryAndUserId(userId,category);
     }
     public List<Item> findUserItem(String userId){
         return itemRepository.findItemByUserId(userId);
