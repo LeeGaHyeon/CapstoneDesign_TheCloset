@@ -6,3 +6,5 @@
 사용자의 의류를 AI가 자동으로 분류해서 저장해주는 가상옷장 시스템
 
 ### 일정
+![SC](https://user-images.githubusercontent.com/50908451/170326905-c0b84d53-0d20-42e5-be88-4eaebadcaf5d.png)
+
