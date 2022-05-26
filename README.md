@@ -28,10 +28,6 @@ HTML을 사용해 전체적인 구조를 잡고 css를 사용하여 사용자가
 ![아키텍처](https://user-images.githubusercontent.com/57384781/170486927-36550980-0c2f-40e1-975c-d5b4fa568f09.png)
 
 
-## 📆일정
-![SC](https://user-images.githubusercontent.com/50908451/170326905-c0b84d53-0d20-42e5-be88-4eaebadcaf5d.png)
-
-
 ## ✔️요구사항
 ![15](https://user-images.githubusercontent.com/50908451/170442263-15d0427b-b1e5-4d3c-84e5-303758250b8b.PNG)
 
