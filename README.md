@@ -8,3 +8,5 @@
 ### 일정
 ![SC](https://user-images.githubusercontent.com/50908451/170326905-c0b84d53-0d20-42e5-be88-4eaebadcaf5d.png)
 
+### 설계
+![2](https://user-images.githubusercontent.com/50908451/170424499-4e33b177-afb1-4f20-bffe-1845054720f6.PNG)
