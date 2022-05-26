@@ -22,7 +22,6 @@ HTML을 사용해 전체적인 구조를 잡고 css를 사용하여 사용자가
 ![3](https://user-images.githubusercontent.com/50908451/170425216-1f5cfdee-644b-4dab-8e56-a4cff0879a5f.PNG)
 ![4](https://user-images.githubusercontent.com/50908451/170425219-8e98e7e0-8ab6-4433-952a-0a0fafb02c4f.PNG)
 ![5](https://user-images.githubusercontent.com/50908451/170425221-c5c1b47a-c1c7-4f91-adb3-6fcea3a3509e.PNG)
-![2](https://user-images.githubusercontent.com/50908451/170424499-4e33b177-afb1-4f20-bffe-1845054720f6.PNG)
 
 ## 🌠메인페이지
 ![main](https://user-images.githubusercontent.com/57384781/170471821-e3e72471-e593-444d-a4af-9148700069b2.png)
