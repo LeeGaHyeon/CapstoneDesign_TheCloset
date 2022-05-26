@@ -1,3 +1,4 @@
+![header](https://capsule-render.vercel.app/api?type=Waving&color=FFA07A&height=300&section=header&text=The Closet%20render&fontSize=90)
 # 내 손안의 AI 가상옷장, TheCloset
 
 ## 웹 기반 딥러닝을 활용한 패션 아이템 관리 및 분류 시스템
