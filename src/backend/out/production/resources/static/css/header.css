@@ -1,0 +1,23 @@
+#navbarNav {
+  position: relative;
+}
+#navbarNav .nav-item_login {
+  position: absolute;
+  left: 60%;
+}
+#navbarNav .nav-item_signup {
+  position: absolute;
+  left: 66%;
+}
+#navbarNav .nav-item {
+  font-size: x-large;
+}
+#headerN {
+  position: relative;
+  left: 43%;
+  text-decoration: none;
+  color: #000;
+  font-size: 2rem;
+  font-weight: bold;
+  top: 20%;
+}
