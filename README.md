@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=Waving&color=FFA07A&height=300&section=header&text=The Closet%20render&fontSize=90)
+![header](https://capsule-render.vercel.app/api?type=Waving&color=FFA07A&height=300&section=header&text=TheCloset%20render&fontSize=90)
 ========================================================================================================================================
 # 내 손안의 AI 가상옷장, TheCloset
 
