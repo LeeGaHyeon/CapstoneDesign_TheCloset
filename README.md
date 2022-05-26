@@ -29,6 +29,6 @@
 ### 회원가입페이지
 ![register](https://user-images.githubusercontent.com/57384781/170472113-82a9a817-ffdc-40c8-8d29-45b7cfe2db23.png)
 ### 옷장페이지
-
+![closet](https://user-images.githubusercontent.com/57384781/170472660-6431a3db-fbbc-470d-97ae-abb098eaf74b.png)
 ### 업로드페이지
 ![upload](https://user-images.githubusercontent.com/57384781/170472580-cedf464a-cb46-43e7-b8a9-cac6768d9ace.png)
