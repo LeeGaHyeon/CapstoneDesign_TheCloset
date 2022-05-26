@@ -31,4 +31,4 @@
 ### 옷장페이지
 
 ### 업로드페이지
-
+![upload](https://user-images.githubusercontent.com/57384781/170472580-cedf464a-cb46-43e7-b8a9-cac6768d9ace.png)
