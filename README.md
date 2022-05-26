@@ -8,6 +8,9 @@
 ### 일정
 ![SC](https://user-images.githubusercontent.com/50908451/170326905-c0b84d53-0d20-42e5-be88-4eaebadcaf5d.png)
 
+### 요구사항
+![15](https://user-images.githubusercontent.com/50908451/170442263-15d0427b-b1e5-4d3c-84e5-303758250b8b.PNG)
+
 ### 설계
 #### UI 설계서
 ![3](https://user-images.githubusercontent.com/50908451/170425216-1f5cfdee-644b-4dab-8e56-a4cff0879a5f.PNG)
