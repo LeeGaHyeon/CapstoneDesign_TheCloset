@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <th:block th:replace="/layout/head :: headFragment "></th:block>
+  <link rel="stylesheet" th:href="@{/css/login.css}">
+  <link rel="stylesheet" th:href="@{/css/main.css}">
+  <link rel="stylesheet" th:href="@{/css/header.css}">
+  <script th:src="@{js/pwcheck.js}"></script>
+  <th:block layout:fragment="css">
+    <style>
+      .error{
+        color: #bb2d3b;
+      }
+    </style>
+  </th:block>
+  <title>Login</title>
+</head>
+<body>
+<header th:replace="/layout/header :: headerFragment"></header>
+<div id="wrapper">
+  <div class="container">
+    <div class="input-form-background row">
+      <div class="input-form col-md-12 mx-auto">
+        <form class="validation-form" novalidate>
+          <div class="md-3">
+            <label th:for="id">아이디</label>
+            <br>
+            <input type="text" name="id" id="id" placeholder="" value="" class="form-control" required>
+            <div class="invalid-feedback">
+              아이디를 입력해주세요.
+            </div>
+          </div>
+          <div class="md-3">
+            <label th:for="password">비밀번호</label>
+            <br>
+            <input type="password"  id="pw" class="form-control" onchange="check_pw()" required>
+            <br>
+            <div>
+              <p th:if="${loginErrorMsg}" class="error" th:text="${loginErrorMsg}"></p>
+            </div>
+            <div class="invalid-feedback">
+              비밀번호를 입력해주세요.
+            </div>
+          </div>
+          <hr>
+          <div class="loginA">
+            <a th:href="@{/members/new}">회원가입</a>
+            <a href="#">아이디/비밀번호 찾기</a>
+          </div>
+          <div class="mb-4"></div>
+          <button class="btn_re btn-primary btn-lg" type="submit">로그인</button>
+          <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('load', () => {
+      const forms = document.getElementsByClassName('validation-form');
+
+      Array.prototype.filter.call(forms, (form) => {
+        form.addEventListener('submit', function (ent) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  </script>
+</div>
+</body>
+<footer th:replace="/layout/footer :: footerFragment"></footer>
+</html>
