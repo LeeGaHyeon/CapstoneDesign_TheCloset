@@ -48,7 +48,7 @@ MVC model을 사용하여 서버와 프론트를 타임리프를 통해 연결�
 ![4](https://user-images.githubusercontent.com/50908451/170425219-8e98e7e0-8ab6-4433-952a-0a0fafb02c4f.PNG)
 ![5](https://user-images.githubusercontent.com/50908451/170425221-c5c1b47a-c1c7-4f91-adb3-6fcea3a3509e.PNG)
 ![2](https://user-images.githubusercontent.com/50908451/170424499-4e33b177-afb1-4f20-bffe-1845054720f6.PNG)
-![8](https://user-images.githubusercontent.com/50908451/170426242-556013ed-5437-4112-8bef-c2e993f0119d.png)
+![8](https://user-images.githubusercontent.com/50908451/170426242-556013ed-5437-4112-8bef-c2e993f0119d.png) ![KakaoTalk_20220526_212825158](https://user-images.githubusercontent.com/57384781/170488013-7c8b99d8-cba2-471b-9e81-936b4b2b7997.png)
 ![아키텍처](https://user-images.githubusercontent.com/57384781/170486927-36550980-0c2f-40e1-975c-d5b4fa568f09.png)
 
 
