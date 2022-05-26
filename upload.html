@@ -11,16 +11,21 @@
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
   <script src="js/loadHTML.js"></script>
-  <script>
-      async function model() {
-          const model = await loadLayersModel('https://github.com/LeeGaHyeon/CapstoneDesign_TheCloset/blob/main/tensorflow%20js/model.json');
-          consol.log("jflsjfkdlf");
-          const imgElement = document.getElementById("previewImage1");
-          const prediction = model.predict(imgElement.src);
-          console.log(prediction);
-          // $('input[name=imageData]').attr('value', prediction);
-      }
-  </script>
+<!--  <script>-->
+<!--      async function model() {-->
+<!--          const model = await loadLayersModel('https://github.com/LeeGaHyeon/CapstoneDesign_TheCloset/blob/main/tensorflow%20js/model.json');-->
+<!--          consol.log("jflsjfkdlf");-->
+<!--          const imgElement = document.getElementById("previewImage1");-->
+<!--          const prediction = model.predict(imgElement.src);-->
+<!--          console.log(prediction);-->
+<!--          // $('input[name=imageData]').attr('value', prediction);-->
+<!--      }-->
+<!--  </script>-->
+  <style>
+    #previewImage1{
+      filter : grayscale(100%);
+    }
+  </style>
 
   <title>Title</title>
 </head>
@@ -32,14 +37,8 @@
         <img style="width: 500px; height: 500px" id="previewImage" src="https://dummyimage.com/500x500/ffffff/000000.png&text=file upload">
         <img style="width: 28px; height: 28px" id="previewImage1" src="https://dummyimage.com/500x500/ffffff/000000.png&text=file upload">
         <input style="display: block;" type="file" id="inputImage">
-<!--        <input type="hidden" name="imageData" value="">-->
         <button class="btn_re btn-primary btn-lg" type="submit" onclick="predict()">업로드</button>
-
       </form>
-<!--        <button type="button" onclick="init()">Start</button>-->
-<!--        <button type="button" onclick="predict()">구별</button>-->
-<!--        <div id="webcam-container"></div>-->
-<!--        <div id="label-container"></div>-->
 
       <script type="text/javascript">
           // 단일파일업로드_
@@ -64,56 +63,17 @@
 
 
       <script type="text/javascript">
-          // More API functions here:
-          // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
-          // the link to your model provided by Teachable Machine export panel
-          const URL = "C:/model/test_model";
-
+          const URL = "https://github.com/LeeGaHyeon/CapstoneDesign_TheCloset/blob/model/tensorflow%20js/";
           let model, webcam, labelContainer, maxPredictions;
-
-          // Load the image model and setup the webcam
           async function init() {
               const modelURL = URL + "model.json";
               const metadataURL = URL + "metadata.json";
-
-              // load the model and metadata
-              // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
-              // or files from your local hard drive
-              // Note: the pose library adds "tmImage" object to your window (window.tmImage)
               model = await tmImage.load(modelURL, metadataURL);
-              maxPredictions = model.getTotalClasses();
-
-              // Convenience function to setup a webcam
-              // const flip = true; // whether to flip the webcam
-              // webcam = new tmImage.Webcam(200, 200, flip); // width, height, flip
-              // await webcam.setup(); // request access to the webcam
-              // await webcam.play();
-              // window.requestAnimationFrame(loop);
-
-              // append elements to the DOM
-              // document.getElementById("webcam-container").appendChild(webcam.canvas);
-              labelContainer = document.getElementById("label-container");
-              for (let i = 0; i < maxPredictions; i++) { // and class labels
-                  labelContainer.appendChild(document.createElement("div"));
-              }
           }
-
-          // async function loop() {
-          //     webcam.update(); // update the webcam frame
-          //     await predict();
-          //     window.requestAnimationFrame(loop);
-          // }
-
-          // run the webcam image through the image model
           async function predict() {
-              // predict can take in an image, video or canvas html element\
               let image = document.getElementById('previewImage1')
               const prediction = await model.predict(image, false);
-              for (let i = 0; i < maxPredictions; i++) {
-                  const classPrediction =
-                      prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-                  labelContainer.childNodes[i].innerHTML = classPrediction;
-              }
+
           }
       </script>
     </div>
