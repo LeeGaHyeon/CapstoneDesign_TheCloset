@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <th:block th:replace="/layout/head :: headFragment "></th:block>
+  <link rel="stylesheet" th:href="@{/css/header.css}">
+  <link rel="stylesheet" th:href="@{/css/main.css}">
+  <link rel="stylesheet" th:href="@{/css/upload.css}">
+  <style>
+    #previewImage1{
+      filter : grayscale(100%);
+    }
+  </style>
+
+  <title>Title</title>
+</head>
+<body>
+<header th:replace="/layout/header :: headerFragment"></header>
+<div id="wrapper">
+  <div class="container">
+    <form th:action="@{/Item/upload}" name="uploader" method="post" enctype="multipart/form-data">
+      <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+      <img style="width: 500px; height: 500px" id="previewImage" src="https://dummyimage.com/500x500/ffffff/000000.png&text=file upload">
+      <img style="width: 28px; height: 28px" id="previewImage1" src="https://dummyimage.com/500x500/ffffff/000000.png&text=file upload">
+      <input style="display: block;" type="file" id="inputImage" name="file">
+      <input type="hidden" name="category" value="">
+      <button class="btn_re btn-primary btn-lg" type="submit" onclick="predict()">업로드</button>
+    </form>
+
+    <script type="text/javascript">
+      // 단일파일업로드
+      function readImage(input) {
+        if (input.files && input.files[0]) {
+          const reader = new FileReader();
+
+          reader.onload = (e) => {
+            const previewImage = document.getElementById('previewImage');
+            previewImage.src = e.target.result;
+          }
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+      // 이벤트 리스너
+      document.getElementById('inputImage').addEventListener('change', (e) => {
+        readImage(e.target);
+      })
+    </script>
+    <script type="text/javascript">
+      const URL = "https://github.com/LeeGaHyeon/CapstoneDesign_TheCloset/blob/model/tensorflow%20js/";
+      let model, webcam, labelContainer, maxPredictions;
+      async function init() {
+        const modelURL = URL + "model.json";
+        const metadataURL = URL + "metadata.json";
+        model = await tmImage.load(modelURL, metadataURL);
+      }
+      async function predict() {
+        let image = document.getElementById('previewImage1')
+        const prediction = await model.predict(image, false);
+        document.uploader.category.value=prediction;
+      }
+    </script>
+  </div>
+</div>
+</body>
+<footer th:replace="/layout/footer :: footerFragment"></footer>
+</html>
