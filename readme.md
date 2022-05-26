@@ -32,26 +32,31 @@ MVC model을 사용하여 서버와 프론트를 thymeleaf 통해 연결했다.
 
 
 ## ✔️요구사항
-![15](https://user-images.githubusercontent.com/50908451/170442263-15d0427b-b1e5-4d3c-84e5-303758250b8b.PNG)
- 
+![image](https://user-images.githubusercontent.com/55836020/170543935-a8ce0caa-16a3-4978-80cd-6f70c98f7e4a.png)
+
+## 👻DB
+![Closet_DB](https://user-images.githubusercontent.com/55836020/170543967-a168435a-e0b5-431a-a4f6-8ac6a66dc2ca.png)
 
 
 ## 📑설계
-### Item 시퀀스 설계도
+
+### 👀Item 시퀀스 설계도
 ![2](https://user-images.githubusercontent.com/50908451/170424499-4e33b177-afb1-4f20-bffe-1845054720f6.PNG)
-### Member 시퀀스 설계도
+### 👀Member 시퀀스 설계도
 ![설계서1](https://user-images.githubusercontent.com/57384781/170488382-9250522f-7948-4770-bd4e-42f4255443bc.png)
-### 클래스 다이어그램
+### 👀클래스 다이어그램
 ![8](https://user-images.githubusercontent.com/50908451/170426242-556013ed-5437-4112-8bef-c2e993f0119d.png) 
-### 딥러닝 - 웹 아키텍처 및 설계
+### 👀딥러닝 - 웹 아키텍처 및 설계
 ![아키텍처](https://user-images.githubusercontent.com/57384781/170486927-36550980-0c2f-40e1-975c-d5b4fa568f09.png)
 
 
 ## 🔥테스트
-### 테스트 확인리스트
+
+### 💥테스트 확인리스트
 ![9](https://user-images.githubusercontent.com/50908451/170426359-7eb10787-1697-41af-932e-90914c7ae75c.png)
 
-### 테스트 코드
+### 💥테스트 코드
+
 #### 로그인 테스트
 ![로그인테스트](https://user-images.githubusercontent.com/55836020/170543227-1c815a56-4e43-416c-bff6-0dd3546c6542.png)
 #### 회원가입 테스트
