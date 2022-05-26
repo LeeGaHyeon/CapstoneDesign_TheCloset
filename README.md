@@ -48,6 +48,9 @@ HTML을 사용해 전체적인 구조를 잡고 css를 사용하여 사용자가
 백엔드에서는 spring boot, jpa, mariaDB를 사용하였다. 로그인과 회원가입의 보안을 위해 security를 이용하였고,
 MVC model을 사용하여 서버와 프론트를 타임리프를 통해 연결했다.
 
+## 🐟DB
+![Closet_DB](https://user-images.githubusercontent.com/55836020/170543967-a168435a-e0b5-431a-a4f6-8ac6a66dc2ca.png)
+
 
 ## 📑설계
 
@@ -55,9 +58,13 @@ MVC model을 사용하여 서버와 프론트를 타임리프를 통해 연결�
 ![3](https://user-images.githubusercontent.com/50908451/170425216-1f5cfdee-644b-4dab-8e56-a4cff0879a5f.PNG)
 ![4](https://user-images.githubusercontent.com/50908451/170425219-8e98e7e0-8ab6-4433-952a-0a0fafb02c4f.PNG)
 ![5](https://user-images.githubusercontent.com/50908451/170425221-c5c1b47a-c1c7-4f91-adb3-6fcea3a3509e.PNG)
+### 😂Item 시퀀스 다이어그램
 ![2](https://user-images.githubusercontent.com/50908451/170424499-4e33b177-afb1-4f20-bffe-1845054720f6.PNG)
+### 😂Member 시퀀스 다이어그램
 ![설계서1](https://user-images.githubusercontent.com/57384781/170488382-9250522f-7948-4770-bd4e-42f4255443bc.png)
+### 😂클래스 다이어그램
 ![8](https://user-images.githubusercontent.com/50908451/170426242-556013ed-5437-4112-8bef-c2e993f0119d.png) 
+### 😂딥러닝 - 웹 아키텍처 및 
 ![아키텍처](https://user-images.githubusercontent.com/57384781/170486927-36550980-0c2f-40e1-975c-d5b4fa568f09.png)
 
 
