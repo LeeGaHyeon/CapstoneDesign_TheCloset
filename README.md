@@ -12,3 +12,29 @@
 ## ✏️기술스택
 
 <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/html-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/jquery-0769AD?style=for-the-badge&logo=jquery&logoColor=white"> <img src="https://img.shields.io/badge/bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white"> <img src="https://img.shields.io/badge/tensorflow.js-F7DF1E?style=for-the-badge&logo=tensorflow&logoColor=orange"> 
+
+## 🌱프론트엔드
+HTML을 사용해 전체적인 구조를 잡고 css를 사용하여 사용자가 보기 편하도록 디자인했다.
+보다 더 깔끔한 디자인을 위해 부트스트랩을 사용하였다.
+웹페이지에 필요한 동작에는 자바스크립트로 작성하였다.
+
+### 🎀UI 설계서
+![3](https://user-images.githubusercontent.com/50908451/170425216-1f5cfdee-644b-4dab-8e56-a4cff0879a5f.PNG)
+![4](https://user-images.githubusercontent.com/50908451/170425219-8e98e7e0-8ab6-4433-952a-0a0fafb02c4f.PNG)
+![5](https://user-images.githubusercontent.com/50908451/170425221-c5c1b47a-c1c7-4f91-adb3-6fcea3a3509e.PNG)
+![2](https://user-images.githubusercontent.com/50908451/170424499-4e33b177-afb1-4f20-bffe-1845054720f6.PNG)
+
+## 🌠메인페이지
+![main](https://user-images.githubusercontent.com/57384781/170471821-e3e72471-e593-444d-a4af-9148700069b2.png)
+
+## 🌠로그인페이지
+![login](https://user-images.githubusercontent.com/57384781/170471978-3ca4e553-adf0-4412-8fa4-17ca4c062ff4.png)
+
+## 🌠회원가입페이지
+![register](https://user-images.githubusercontent.com/57384781/170472113-82a9a817-ffdc-40c8-8d29-45b7cfe2db23.png)
+
+## 🌠옷장페이지
+![closet](https://user-images.githubusercontent.com/57384781/170472660-6431a3db-fbbc-470d-97ae-abb098eaf74b.png)
+
+## 🌠업로드페이지
+![upload](https://user-images.githubusercontent.com/57384781/170472580-cedf464a-cb46-43e7-b8a9-cac6768d9ace.png)
