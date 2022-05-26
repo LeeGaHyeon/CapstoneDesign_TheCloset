@@ -39,6 +39,8 @@ MVC model을 사용하여 서버와 프론트를 타임리프를 통해 연결�
 ![5](https://user-images.githubusercontent.com/50908451/170425221-c5c1b47a-c1c7-4f91-adb3-6fcea3a3509e.PNG)
 ![2](https://user-images.githubusercontent.com/50908451/170424499-4e33b177-afb1-4f20-bffe-1845054720f6.PNG)
 ![8](https://user-images.githubusercontent.com/50908451/170426242-556013ed-5437-4112-8bef-c2e993f0119d.png)
+![아키텍처](https://user-images.githubusercontent.com/57384781/170486927-36550980-0c2f-40e1-975c-d5b4fa568f09.png)
+
 
 ### 테스트
 ![9](https://user-images.githubusercontent.com/50908451/170426359-7eb10787-1697-41af-932e-90914c7ae75c.png)
