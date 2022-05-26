@@ -47,7 +47,6 @@ class MemberControllerTest {
                 .user(userId).password(password))
                 .andExpect(SecurityMockMvcResultMatchers.authenticated());
     }
-
     @Test
     @DisplayName("로그인 실패 테스트")
     public void loginFailTest() throws Exception{

@@ -41,7 +41,7 @@ public class ItemController {
         return "redirect:/";
     }
 
-    @GetMapping("/Item/Product/{category}")
+  @GetMapping("/Item/Product/{category}")
     public String ItemList( Principal principal, Model model, @PathVariable("category") String category ){
         String userId = principal.getName();
         List<Item> itemList = null;
@@ -54,9 +54,15 @@ public class ItemController {
             itemList = itemService.findCategoryItem(userId,categoryEnum);
         }
         itemCategoryDtoList=ItemCategoryDto.of(itemList);
-        model.addAttribute("items", itemCategoryDtoList);
-
+       // model.addAttribute("items", itemCategoryDtoList);
+        if(itemCategoryDtoList != null){
+            model.addAttribute("items", itemCategoryDtoList);
+            return "redirect:/Item/Product/"+category;
+        }
         return  "product";
     }
+
+
+
 
 }

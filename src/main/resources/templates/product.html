@@ -50,9 +50,11 @@
       <div class="container3" th:each=" item : ${items}">
         <div class="row row-cols-lg-4 row-cols-sm-1 row-cols-md-2">
           <article>
-            <img th:src="@{${item.filePath}}" class="photo" alt="no image" src="">
+            <img th:src="${item.filePath}" class="photo" alt="no image" th:if="${item.filePath != null}">
+            <p  th:text="${item.filePath}"></p>
           </article>
         </div>
+
       </div>
   </div>
 </body>

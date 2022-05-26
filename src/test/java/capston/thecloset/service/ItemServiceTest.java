@@ -60,7 +60,6 @@ class ItemServiceTest {
             assertThat(findItem.getCategory()).isEqualTo(itemCategoryDto.getCategory());
             assertThat(findItem.getFilepath()).isEqualTo(itemCategoryDto.getFilePath());
         }
-
     }
 
     @Test

@@ -25,11 +25,11 @@ public class ItemService {
 
     @Transactional
     public void upload(String category,String memberId,MultipartFile file) throws Exception{
-        //file local 저장
+        //file을 local에 저장
         String projectPath = System.getProperty("user.dir")+"\\src\\main\\resources\\static\\files";
 
         UUID uuid = UUID.randomUUID();
-        String fileName = uuid + "_"+file.getOriginalFilename();
+        String fileName = uuid +"_"+file.getOriginalFilename();//
 
         File saveFile = new File(projectPath,fileName); // 컴퓨터에 이미지 저장
         file.transferTo(saveFile);
