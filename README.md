@@ -11,6 +11,8 @@
 
 ### 아키텍쳐
 ![16](https://user-images.githubusercontent.com/50908451/170485427-0c3414b5-b82c-475f-b768-14202b11b6ce.PNG)
+![아키텍처](https://user-images.githubusercontent.com/57384781/170486927-36550980-0c2f-40e1-975c-d5b4fa568f09.png)
+
 
 ### 일정
 ![SC](https://user-images.githubusercontent.com/50908451/170326905-c0b84d53-0d20-42e5-be88-4eaebadcaf5d.png)
