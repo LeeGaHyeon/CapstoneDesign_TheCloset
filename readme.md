@@ -52,4 +52,11 @@ MVC model을 사용하여 서버와 프론트를 thymeleaf 통해 연결했다.
 ![9](https://user-images.githubusercontent.com/50908451/170426359-7eb10787-1697-41af-932e-90914c7ae75c.png)
 
 ### 테스트 코드
+#### 로그인 테스트
+![로그인테스트](https://user-images.githubusercontent.com/55836020/170543227-1c815a56-4e43-416c-bff6-0dd3546c6542.png)
+#### 회원가입 테스트
+![회원가입테스트](https://user-images.githubusercontent.com/55836020/170543248-f059beaa-0c4b-4804-90a2-268383824082.png)
+#### 아이템 리스트 테스트
+![카테고리별리스트](https://user-images.githubusercontent.com/55836020/170543240-71d74176-4658-4f30-9ff1-b6e843cfc5aa.png)
+
 
