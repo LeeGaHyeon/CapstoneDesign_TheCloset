@@ -13,6 +13,18 @@
 
 <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/html-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/jquery-0769AD?style=for-the-badge&logo=jquery&logoColor=white"> <img src="https://img.shields.io/badge/bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white"> <img src="https://img.shields.io/badge/tensorflow.js-F7DF1E?style=for-the-badge&logo=tensorflow&logoColor=orange"> 
 
+## 🔎아키텍쳐
+![16](https://user-images.githubusercontent.com/50908451/170485427-0c3414b5-b82c-475f-b768-14202b11b6ce.PNG)
+![아키텍처](https://user-images.githubusercontent.com/57384781/170486927-36550980-0c2f-40e1-975c-d5b4fa568f09.png)
+
+
+## 📆일정
+![SC](https://user-images.githubusercontent.com/50908451/170326905-c0b84d53-0d20-42e5-be88-4eaebadcaf5d.png)
+
+
+## ✔️요구사항
+![15](https://user-images.githubusercontent.com/50908451/170442263-15d0427b-b1e5-4d3c-84e5-303758250b8b.PNG)
+
 ## 🌱프론트엔드
 HTML을 사용해 전체적인 구조를 잡고 css를 사용하여 사용자가 보기 편하도록 디자인했다.
 보다 더 깔끔한 디자인을 위해 부트스트랩을 사용하였다.
