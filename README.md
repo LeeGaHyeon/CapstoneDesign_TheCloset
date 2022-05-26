@@ -16,7 +16,9 @@
 ![15](https://user-images.githubusercontent.com/50908451/170442263-15d0427b-b1e5-4d3c-84e5-303758250b8b.PNG)
 
 ### 딥러닝
-
+의류이미지를 분류하는 문제를 컴퓨터비전 기술 중 하나인 image classification을 통해 구현한다.
+데이터셋은 약 70,000장의 의류 데이터셋  fashion-MNIST이다.
+딥러닝 모델구축에 사용한 네트워크로는 fully conected network와 convolutional neural network이다.
 
 ### 프론트엔드
 HTML을 사용해 전체적인 구조를 잡고 css를 사용하여 사용자가 보기 편하도록 디자인했다.
