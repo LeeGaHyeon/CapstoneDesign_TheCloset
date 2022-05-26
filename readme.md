@@ -10,17 +10,20 @@
   - 학번 : 20185131
   - 소속 : 소프트웨어 융합대학 빅데이터전공
 
-## 📌개요
-사용자의 의류를 AI가 자동으로 분류해서 저장해주는 가상옷장 시스템
-![프젝설명이미지](https://user-images.githubusercontent.com/57384781/170487350-69436f42-d096-4cfc-ba16-0a302cb91b46.png)
-
-
-## ✏️기술스택
-<img src="https://img.shields.io/badge/JAVA-007396?style=for-the-badge&logo=java&logoColor=white"> <img src="https://img.shields.io/badge/jpa-007396?style=for-the-badge&logo=java&logoColor=white"> <img src="https://img.shields.io/badge/thymeleaf-007396?style=for-the-badge&logo=thymeleaf&logoColor=white"> <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=Spring&logoColor=white"> <img src="https://img.shields.io/badge/mariaDB-003545?style=for-the-badge&logo=mariaDB&logoColor=white"> 
 
 ## 🌱백엔드
 백엔드에서는 spring boot, jpa, mariaDB를 사용하였다. 로그인과 회원가입의 보안을 위해 security를 이용하였고,
 MVC model을 사용하여 서버와 프론트를 thymeleaf 통해 연결했다.
+
+
+## ✏️기술스택
+<img src="https://img.shields.io/badge/JAVA-007396?style=for-the-badge&logo=java&logoColor=white"> <img src="https://img.shields.io/badge/jpa-D70F64?style=for-the-badge&logo=java&logoColor=white"> <img src="https://img.shields.io/badge/thymeleaf-005F0F?style=for-the-badge&logo=thymeleaf&logoColor=white"> <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=Spring&logoColor=white"> <img src="https://img.shields.io/badge/mariaDB-003545?style=for-the-badge&logo=mariaDB&logoColor=white"> 
+
+
+
+## 📌개요
+사용자의 의류를 AI가 자동으로 분류해서 저장해주는 가상옷장 시스템
+![프젝설명이미지](https://user-images.githubusercontent.com/57384781/170487350-69436f42-d096-4cfc-ba16-0a302cb91b46.png)
 
 
 ## 🔎아키텍쳐
