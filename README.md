@@ -23,7 +23,7 @@
 ![9](https://user-images.githubusercontent.com/50908451/170426359-7eb10787-1697-41af-932e-90914c7ae75c.png)
 
 ### 메인페이지
-
+![main](https://user-images.githubusercontent.com/57384781/170471821-e3e72471-e593-444d-a4af-9148700069b2.png)
 ### 로그인페이지
 
 ### 회원가입페이지
