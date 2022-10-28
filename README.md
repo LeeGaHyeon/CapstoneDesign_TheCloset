@@ -35,7 +35,7 @@
 ## 🌱딥러닝
 의류 이미지를 분류하는 문제를 컴퓨터비전 기술 중 하나인 image classification을 통해 구현한다.
 데이터셋은 약 70,000장의 의류 데이터셋  fashion-MNIST와 사용자가 직접 수집한 의류 이미지이다.
-딥러닝 모델구축에 사용한 네트워크로는 fully connected network와 convolutional neural network이다.
+딥러닝 모델구축에 사용한 네트워크로는 convolutional neural network이다.
 
 
 ## 🌱프론트엔드
